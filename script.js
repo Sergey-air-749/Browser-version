@@ -16,9 +16,6 @@ const userAgent = navigator.userAgent;
 if (userAgent.indexOf('Firefox') != -1) {
   document.getElementById('info').innerHTML += 'Firefox';
 } else {
-  if (userAgent.indexOf('Chrome') != -1) {
-    document.getElementById('info').innerHTML += 'Chrome';
-  } else {
     if (userAgent.indexOf('Safari') != -1) {
       document.getElementById('info').innerHTML += 'Safari';
     } else {
@@ -31,12 +28,15 @@ if (userAgent.indexOf('Firefox') != -1) {
           if (userAgent.indexOf('YaBrowser') != -1) {
             document.getElementById('info').innerHTML += 'Яндекс Браузер';
           } else {
-            document.getElementById('info').innerHTML += 'Неизвестный браузер';
+            if (userAgent.indexOf('Chrome') != -1) {
+              document.getElementById('info').innerHTML += 'Chrome';
+            } else {
+              document.getElementById('info').innerHTML += 'Неизвестный браузер';
+            }
           }
         }
       }
     }
-  }
 }
 
 
