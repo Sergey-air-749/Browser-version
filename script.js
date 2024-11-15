@@ -9,7 +9,7 @@ document.getElementById('Browser-version-platform').innerHTML =
 
 const userAgent = navigator.userAgent;
 
-document.getElementById('info-full').innerHTML == userAgent;
+// document.getElementById('info-full').innerHTML += userAgent;
 
 if (userAgent.indexOf('Firefox') != -1) {
   document.getElementById('info').innerHTML += 'Firefox';
