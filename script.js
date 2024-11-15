@@ -11,6 +11,8 @@ const userAgent = navigator.userAgent;
 
 // document.getElementById('info-full').innerHTML += userAgent;
 
+
+
 if (userAgent.indexOf('Firefox') != -1) {
   document.getElementById('info').innerHTML += 'Firefox';
 } else {
@@ -23,7 +25,15 @@ if (userAgent.indexOf('Firefox') != -1) {
       if (userAgent.indexOf('Opera') != -1) {
         document.getElementById('info').innerHTML += 'Opera';
       } else {
-        document.getElementById('info').innerHTML += 'Неизвестный браузер';
+        if (userAgent.indexOf('SamsungBrowser') != -1) {
+          document.getElementById('info').innerHTML += 'Samsung Internet';
+        } else {
+          if (userAgent.indexOf('YaBrowser') != -1) {
+            document.getElementById('info').innerHTML += 'Яндекс Браузер';
+          } else {
+            document.getElementById('info').innerHTML += 'Неизвестный браузер';
+          }
+        }
       }
     }
   }
