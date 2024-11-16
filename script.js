@@ -15,28 +15,24 @@ const userAgent = navigator.userAgent;
 
 if (userAgent.indexOf('Firefox') != -1) {
   document.getElementById('info').innerHTML += 'Firefox';
+
+} else if (userAgent.indexOf('Safari') != -1) {
+  document.getElementById('info').innerHTML += 'Safari';
+
+} else if (userAgent.indexOf('Opera') != -1) {
+  document.getElementById('info').innerHTML += 'Opera';
+
+} else if (userAgent.indexOf('SamsungBrowser') != -1) {
+  document.getElementById('info').innerHTML += 'Samsung Internet';
+
+} else if (userAgent.indexOf('YaBrowser') != -1) {
+  document.getElementById('info').innerHTML += 'Яндекс Браузер';
+
+} else if (userAgent.indexOf('Chrome') != -1) {
+  document.getElementById('info').innerHTML += 'Chrome';
+
 } else {
-    if (userAgent.indexOf('Safari') != -1) {
-      document.getElementById('info').innerHTML += 'Safari';
-    } else {
-      if (userAgent.indexOf('Opera') != -1) {
-        document.getElementById('info').innerHTML += 'Opera';
-      } else {
-        if (userAgent.indexOf('SamsungBrowser') != -1) {
-          document.getElementById('info').innerHTML += 'Samsung Internet';
-        } else {
-          if (userAgent.indexOf('YaBrowser') != -1) {
-            document.getElementById('info').innerHTML += 'Яндекс Браузер';
-          } else {
-            if (userAgent.indexOf('Chrome') != -1) {
-              document.getElementById('info').innerHTML += 'Chrome';
-            } else {
-              document.getElementById('info').innerHTML += 'Неизвестный браузер';
-            }
-          }
-        }
-      }
-    }
+  document.getElementById('info').innerHTML += 'Неизвестный браузер';
 }
 
 
